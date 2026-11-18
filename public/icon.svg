@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#047857" />
+      <stop offset="50%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047" />
+      <stop offset="100%" stop-color="#eab308" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded rectangle for desktop and mobile icon -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Inner subtle border -->
+  <rect x="16" y="16" width="480" height="480" rx="96" fill="none" stroke="#ffffff" stroke-width="6" stroke-opacity="0.2" />
+
+  <!-- Main Ledger / Bill Card -->
+  <g filter="url(#shadow)">
+    <!-- Main Paper Document Frame -->
+    <rect x="110" y="96" width="292" height="320" rx="28" fill="#ffffff" />
+    
+    <!-- Top accent header on invoice paper -->
+    <path d="M 110 124 C 110 108.5 122.5 96 138 96 L 374 96 C 389.5 96 402 108.5 402 124 L 402 156 L 110 156 Z" fill="#059669" />
+    
+    <!-- Header title bar and badge -->
+    <rect x="140" y="118" width="110" height="16" rx="8" fill="#ffffff" fill-opacity="0.9" />
+    <circle cx="366" cy="126" r="10" fill="#fde047" />
+
+    <!-- Ledger lines (simulating paper invoices and accounting records) -->
+    <rect x="140" y="184" width="232" height="14" rx="7" fill="#e2e8f0" />
+    <rect x="140" y="216" width="160" height="14" rx="7" fill="#cbd5e1" />
+    <rect x="330" y="216" width="42" height="14" rx="7" fill="#059669" fill-opacity="0.3" />
+
+    <rect x="140" y="248" width="232" height="14" rx="7" fill="#e2e8f0" />
+    <rect x="140" y="280" width="140" height="14" rx="7" fill="#cbd5e1" />
+    <rect x="310" y="280" width="62" height="14" rx="7" fill="#059669" fill-opacity="0.3" />
+
+    <!-- Stamp / Verification seal -->
+    <circle cx="340" cy="350" r="32" fill="url(#goldGrad)" />
+    <path d="M 330 350 L 338 358 L 354 340" fill="none" stroke="#713f12" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Financial Cash & Currency symbols -->
+    <g transform="translate(140, 320)">
+      <rect x="0" y="0" width="140" height="52" rx="14" fill="#f0fdf4" stroke="#86efac" stroke-width="2" />
+      <text x="70" y="34" font-family="Arial, sans-serif" font-weight="900" font-size="24" fill="#15803d" text-anchor="middle">د.ل</text>
+    </g>
+  </g>
+
+  <!-- Golden Coin Floating Badge -->
+  <g filter="url(#shadow)">
+    <circle cx="380" cy="110" r="36" fill="url(#goldGrad)" stroke="#fef08a" stroke-width="4" />
+    <circle cx="380" cy="110" r="26" fill="none" stroke="#b45309" stroke-width="2" stroke-dasharray="4 2" />
+    <text x="380" y="119" font-family="Arial, sans-serif" font-weight="900" font-size="26" fill="#78350f" text-anchor="middle">$</text>
+  </g>
+</svg>
